@@ -16,3 +16,5 @@
 /Users/folawewo/Folawewo/Switch/src/switch.infrastructure/obj/Debug/net8.0/refint/switch.infrastructure.dll
 /Users/folawewo/Folawewo/Switch/src/switch.infrastructure/obj/Debug/net8.0/switch.infrastructure.pdb
 /Users/folawewo/Folawewo/Switch/src/switch.infrastructure/obj/Debug/net8.0/ref/switch.infrastructure.dll
+/Users/folawewo/Folawewo/Switch/src/switch.infrastructure/bin/Debug/net8.0/switch.infrastructure.runtimeconfig.json
+/Users/folawewo/Folawewo/Switch/src/switch.infrastructure/obj/Debug/net8.0/switch.infrastructure.genruntimeconfig.cache

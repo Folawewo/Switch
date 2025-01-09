@@ -1,3 +1,4 @@
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;
 using @switch.application.Implementation;
 using @switch.application.Interface;
@@ -11,8 +12,11 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddDbContext<SwitchDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("SwitchDatabase")));
+
+builder.Services.AddScoped<IRepository<SwitchToggle>, SqlFeatureToggleRepository>();
 builder.Services.AddScoped<ISwitchToggleService, SwitchToggleService>();
-builder.Services.AddSingleton<IRepository<SwitchToggle>, InMemoryFeatureToggleRepository>();
 
 var app = builder.Build();
 

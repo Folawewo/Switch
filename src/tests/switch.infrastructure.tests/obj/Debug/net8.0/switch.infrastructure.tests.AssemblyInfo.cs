@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("switch.infrastructure.tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c7cbb6211bde27ec6e42ca7c42be93bb2987249a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+047d121a8148f2ff19e8131ffcf775451fe26b4f")]
 [assembly: System.Reflection.AssemblyProductAttribute("switch.infrastructure.tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("switch.infrastructure.tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

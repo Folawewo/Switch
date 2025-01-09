@@ -28,6 +28,7 @@ namespace @switch.api.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateToggle([FromBody] SwitchToggle toggle)
         {
+            toggle.Id = Guid.NewGuid();
             await _switchToggleRepository.CreateToggleAsync(toggle);
             return CreatedAtAction(nameof(GetToggleById), new { id = toggle.Id }, toggle);
         }

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("switch.api.tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a4a4716ae6d20905943ee96d835e4883a0e879fc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+047d121a8148f2ff19e8131ffcf775451fe26b4f")]
 [assembly: System.Reflection.AssemblyProductAttribute("switch.api.tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("switch.api.tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

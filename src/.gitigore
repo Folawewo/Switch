@@ -52,3 +52,4 @@ tests/**/obj/
 # Temporary files
 *.tmp
 *.bak
+src/.idea/

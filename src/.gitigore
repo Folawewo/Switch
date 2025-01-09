@@ -1,0 +1,54 @@
+# Ignore build and binary files
+/bin/
+/obj/
+/*.dll
+/*.exe
+/*.pdb
+/*.cache
+/*.csproj.FileListAbsolute.txt
+
+# Rider and IDE-specific files
+.idea/
+/rider.project.*
+.vscode/
+.vs/
+
+# User-specific files
+*.user
+*.suo
+*.swp
+
+# Log files
+*.log
+
+# NuGet packages
+*.nupkg
+/Packages/
+
+# Static assets and generated files
+wwwroot/
+staticwebassets/
+
+# Node modules (for Switch.Web)
+switch.web/node_modules/
+
+# React build files
+switch.web/dist/
+
+# Tailwind and PostCSS config (if auto-generated)
+/postcss.config.js
+/tailwind.config.js
+
+# Test output files
+tests/**/bin/
+tests/**/obj/
+
+# Debugging artifacts
+*.sourcelink.json
+
+# macOS-specific files
+.DS_Store
+
+# Temporary files
+*.tmp
+*.bak

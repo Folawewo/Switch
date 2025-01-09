@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "switch.application/1.0.0": {
+        "dependencies": {
+          "switch.domain": "1.0.0"
+        },
+        "runtime": {
+          "switch.application.dll": {}
+        }
+      },
+      "switch.domain/1.0.0": {
+        "runtime": {
+          "switch.domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "switch.application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "switch.domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

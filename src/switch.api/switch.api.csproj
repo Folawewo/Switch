@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\switch.application\switch.application.csproj" />
+    <ProjectReference Include="..\switch.infrastructure\switch.infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

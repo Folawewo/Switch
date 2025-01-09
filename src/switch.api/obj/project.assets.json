@@ -130,6 +130,20 @@
         "runtime": {
           "bin/placeholder/switch.domain.dll": {}
         }
+      },
+      "switch.infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "switch.application": "1.0.0",
+          "switch.domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/switch.infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/switch.infrastructure.dll": {}
+        }
       }
     }
   },
@@ -484,13 +498,19 @@
       "type": "project",
       "path": "../switch.domain/switch.domain.csproj",
       "msbuildProject": "../switch.domain/switch.domain.csproj"
+    },
+    "switch.infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../switch.infrastructure/switch.infrastructure.csproj",
+      "msbuildProject": "../switch.infrastructure/switch.infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
       "Microsoft.AspNetCore.OpenApi >= 8.0.2",
       "Swashbuckle.AspNetCore >= 6.4.0",
-      "switch.application >= 1.0.0"
+      "switch.application >= 1.0.0",
+      "switch.infrastructure >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -521,6 +541,9 @@
           "projectReferences": {
             "/Users/folawewo/Folawewo/Switch/src/switch.application/switch.application.csproj": {
               "projectPath": "/Users/folawewo/Folawewo/Switch/src/switch.application/switch.application.csproj"
+            },
+            "/Users/folawewo/Folawewo/Switch/src/switch.infrastructure/switch.infrastructure.csproj": {
+              "projectPath": "/Users/folawewo/Folawewo/Switch/src/switch.infrastructure/switch.infrastructure.csproj"
             }
           }
         }

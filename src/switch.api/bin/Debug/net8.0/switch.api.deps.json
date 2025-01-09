@@ -10,7 +10,8 @@
         "dependencies": {
           "Microsoft.AspNetCore.OpenApi": "8.0.2",
           "Swashbuckle.AspNetCore": "6.4.0",
-          "switch.application": "1.0.0"
+          "switch.application": "1.0.0",
+          "switch.infrastructure": "1.0.0"
         },
         "runtime": {
           "switch.api.dll": {}
@@ -86,6 +87,15 @@
         "runtime": {
           "switch.domain.dll": {}
         }
+      },
+      "switch.infrastructure/1.0.0": {
+        "dependencies": {
+          "switch.application": "1.0.0",
+          "switch.domain": "1.0.0"
+        },
+        "runtime": {
+          "switch.infrastructure.dll": {}
+        }
       }
     }
   },
@@ -150,6 +160,11 @@
       "sha512": ""
     },
     "switch.domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "switch.infrastructure/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

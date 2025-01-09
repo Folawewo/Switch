@@ -1,0 +1,67 @@
+:root {
+    --bg-color: #f4f4f9;
+    --text-color: #000;
+    --table-border: #ccc;
+    --header-bg: #333;
+    --header-text: white;
+    --button-bg: #007bff;
+    --button-hover-bg: #0056b3;
+}
+
+[data-theme="dark"] {
+    --bg-color: #121212;
+    --text-color: #fff;
+    --table-border: #444;
+    --header-bg: #1e1e1e;
+    --header-text: #ccc;
+    --button-bg: #bb86fc;
+    --button-hover-bg: #3700b3;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+header {
+    background: var(--header-bg);
+    color: var(--header-text);
+    text-align: center;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+main {
+    padding: 1rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+}
+
+table th, table td {
+    border: 1px solid var(--table-border);
+    padding: 0.5rem;
+    text-align: left;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    background: var(--button-bg);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: var(--button-hover-bg);
+}

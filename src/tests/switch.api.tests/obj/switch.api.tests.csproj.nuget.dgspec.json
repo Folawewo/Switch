@@ -29,6 +29,9 @@
             "projectReferences": {
               "/Users/folawewo/Folawewo/Switch/src/switch.application/switch.application.csproj": {
                 "projectPath": "/Users/folawewo/Folawewo/Switch/src/switch.application/switch.application.csproj"
+              },
+              "/Users/folawewo/Folawewo/Switch/src/switch.infrastructure/switch.infrastructure.csproj": {
+                "projectPath": "/Users/folawewo/Folawewo/Switch/src/switch.infrastructure/switch.infrastructure.csproj"
               }
             }
           }
@@ -166,6 +169,72 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.201/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/folawewo/Folawewo/Switch/src/switch.infrastructure/switch.infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/folawewo/Folawewo/Switch/src/switch.infrastructure/switch.infrastructure.csproj",
+        "projectName": "switch.infrastructure",
+        "projectPath": "/Users/folawewo/Folawewo/Switch/src/switch.infrastructure/switch.infrastructure.csproj",
+        "packagesPath": "/Users/folawewo/.nuget/packages/",
+        "outputPath": "/Users/folawewo/Folawewo/Switch/src/switch.infrastructure/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/folawewo/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/folawewo/Folawewo/Switch/src/switch.application/switch.application.csproj": {
+                "projectPath": "/Users/folawewo/Folawewo/Switch/src/switch.application/switch.application.csproj"
+              },
+              "/Users/folawewo/Folawewo/Switch/src/switch.domain/switch.domain.csproj": {
+                "projectPath": "/Users/folawewo/Folawewo/Switch/src/switch.domain/switch.domain.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

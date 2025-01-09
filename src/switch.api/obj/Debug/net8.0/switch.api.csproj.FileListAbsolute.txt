@@ -37,3 +37,5 @@
 /Users/folawewo/Folawewo/Switch/src/switch.api/obj/Debug/net8.0/switch.api.pdb
 /Users/folawewo/Folawewo/Switch/src/switch.api/obj/Debug/net8.0/switch.api.genruntimeconfig.cache
 /Users/folawewo/Folawewo/Switch/src/switch.api/obj/Debug/net8.0/ref/switch.api.dll
+/Users/folawewo/Folawewo/Switch/src/switch.api/bin/Debug/net8.0/switch.infrastructure.dll
+/Users/folawewo/Folawewo/Switch/src/switch.api/bin/Debug/net8.0/switch.infrastructure.pdb

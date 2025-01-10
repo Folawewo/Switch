@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using @switch.application.Interface;
 using @switch.domain.Entities;
+using @switch.infrastructure.Services;
 
 namespace @switch.api.Controllers
 {
@@ -8,20 +9,26 @@ namespace @switch.api.Controllers
     [Route("api/v1/switch")]
     public class SwitchController : ControllerBase
     {
-        private readonly ISwitchToggleService _switchToggleRepository;
+        private readonly ISwitchToggleService _switchToggleService;
+        private readonly SwitchToggleNotifier _notifier;
 
-        public SwitchController(ISwitchToggleService switchToggleRepository)
+        public SwitchController(ISwitchToggleService switchToggleService, SwitchToggleNotifier notifier)
         {
-            _switchToggleRepository = switchToggleRepository;
+            _switchToggleService = switchToggleService;
+            _notifier = notifier;
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAllToggles() => Ok(await _switchToggleRepository.GetAllTogglesAsync());
+        public async Task<IActionResult> GetAllToggles()
+        {
+            var toggles = await _switchToggleService.GetAllTogglesAsync();
+            return Ok(toggles);
+        }
 
         [HttpGet("{id:guid}")]
         public async Task<IActionResult> GetToggleById(Guid id)
         {
-            var toggle = await _switchToggleRepository.GetToggleByIdAsync(id);
+            var toggle = await _switchToggleService.GetToggleByIdAsync(id);
             return toggle == null ? NotFound() : Ok(toggle);
         }
 
@@ -29,7 +36,8 @@ namespace @switch.api.Controllers
         public async Task<IActionResult> CreateToggle([FromBody] SwitchToggle toggle)
         {
             toggle.Id = Guid.NewGuid();
-            await _switchToggleRepository.CreateToggleAsync(toggle);
+            await _switchToggleService.CreateToggleAsync(toggle);
+            await _notifier.NotifyToggleCreated(toggle); 
             return CreatedAtAction(nameof(GetToggleById), new { id = toggle.Id }, toggle);
         }
 
@@ -37,14 +45,16 @@ namespace @switch.api.Controllers
         public async Task<IActionResult> UpdateToggle(Guid id, [FromBody] SwitchToggle toggle)
         {
             toggle.Id = id;
-            await _switchToggleRepository.UpdateToggleAsync(toggle);
+            await _switchToggleService.UpdateToggleAsync(toggle);
+            await _notifier.NotifyToggleUpdated(toggle);
             return NoContent();
         }
 
         [HttpDelete("{id:guid}")]
         public async Task<IActionResult> DeleteToggle(Guid id)
         {
-            await _switchToggleRepository.DeleteToggleAsync(id);
+            await _switchToggleService.DeleteToggleAsync(id);
+            await _notifier.NotifyToggleDeleted(id); 
             return NoContent();
         }
     }

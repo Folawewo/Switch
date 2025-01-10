@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using @switch.api.Controllers;
 using @switch.application.Interface;
 using @switch.domain.Entities;
+using @switch.infrastructure.Services;
 using Xunit;
 
 namespace Switch.Api.Tests
@@ -10,12 +11,14 @@ namespace Switch.Api.Tests
     public class SwitchControllerTests
     {
         private readonly Mock<ISwitchToggleService> _serviceMock;
+        private readonly Mock<SwitchToggleNotifier> _notifierMock;
         private readonly SwitchController _controller;
 
         public SwitchControllerTests()
         {
             _serviceMock = new Mock<ISwitchToggleService>();
-            _controller = new SwitchController(_serviceMock.Object);
+            _notifierMock = new Mock<SwitchToggleNotifier>();
+            _controller = new SwitchController(_serviceMock.Object, _notifierMock.Object);
         }
 
         [Fact]

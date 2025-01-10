@@ -1,4 +1,5 @@
 /Users/folawewo/Folawewo/Switch/src/switch.application/bin/Debug/net8.0/switch.application.deps.json
+/Users/folawewo/Folawewo/Switch/src/switch.application/bin/Debug/net8.0/switch.application.runtimeconfig.json
 /Users/folawewo/Folawewo/Switch/src/switch.application/bin/Debug/net8.0/switch.application.dll
 /Users/folawewo/Folawewo/Switch/src/switch.application/bin/Debug/net8.0/switch.application.pdb
 /Users/folawewo/Folawewo/Switch/src/switch.application/bin/Debug/net8.0/switch.domain.dll
@@ -13,6 +14,5 @@
 /Users/folawewo/Folawewo/Switch/src/switch.application/obj/Debug/net8.0/switch.application.dll
 /Users/folawewo/Folawewo/Switch/src/switch.application/obj/Debug/net8.0/refint/switch.application.dll
 /Users/folawewo/Folawewo/Switch/src/switch.application/obj/Debug/net8.0/switch.application.pdb
-/Users/folawewo/Folawewo/Switch/src/switch.application/obj/Debug/net8.0/ref/switch.application.dll
-/Users/folawewo/Folawewo/Switch/src/switch.application/bin/Debug/net8.0/switch.application.runtimeconfig.json
 /Users/folawewo/Folawewo/Switch/src/switch.application/obj/Debug/net8.0/switch.application.genruntimeconfig.cache
+/Users/folawewo/Folawewo/Switch/src/switch.application/obj/Debug/net8.0/ref/switch.application.dll

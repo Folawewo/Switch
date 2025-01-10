@@ -17,11 +17,20 @@ namespace @switch.application.Implementation
 
         public async Task<SwitchToggle?> GetToggleByIdAsync(Guid id) => await _switchToggleRepository.GetByIdAsync(id);
 
-        public async Task CreateToggleAsync(SwitchToggle toggle) => await _switchToggleRepository.AddAsync(toggle);
+        public async Task CreateToggleAsync(SwitchToggle toggle)
+        {
+            await _switchToggleRepository.AddAsync(toggle);
+        }
 
-        public async Task UpdateToggleAsync(SwitchToggle toggle) => await _switchToggleRepository.UpdateAsync(toggle);
+        public async Task UpdateToggleAsync(SwitchToggle toggle)
+        {
+            await _switchToggleRepository.UpdateAsync(toggle);
+        }
 
-        public async Task DeleteToggleAsync(Guid id) => await _switchToggleRepository.DeleteAsync(id);
+        public async Task DeleteToggleAsync(Guid id)
+        {
+            await _switchToggleRepository.DeleteAsync(id);
+        }
 
         public async Task<bool> EvaluateToggleAsync(string toggleName, Dictionary<string, object> context)
         {
@@ -29,7 +38,7 @@ namespace @switch.application.Implementation
             var toggle = toggles.FirstOrDefault(t => t.Name == toggleName && t.IsEnabled);
 
             if (toggle == null) return false;
-            
+
             return true;
         }
     }

@@ -1,22 +1,30 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;
-using @switch.application.Implementation;
-using @switch.application.Interface;
-using @switch.domain.Entities;
-using @switch.domain.Repository;
-using @switch.infrastructure.DAL;
+using @switch.api.Hubs;
+using @switch.infrastructure.Extensions;
+using @switch.infrastructure.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
+
+builder.Services.AddSwitch(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("SwitchDatabase"))); 
+
+builder.Services.AddSignalR(); 
 builder.Services.AddControllers();
-builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddDbContext<SwitchDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("SwitchDatabase")));
+builder.Services.AddScoped<SwitchToggleNotifier>();
 
-builder.Services.AddScoped<IRepository<SwitchToggle>, SqlFeatureToggleRepository>();
-builder.Services.AddScoped<ISwitchToggleService, SwitchToggleService>();
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(policy =>
+    {
+        policy.AllowAnyOrigin()
+            .AllowAnyHeader()
+            .AllowAnyMethod();
+    });
+});
 
 var app = builder.Build();
 
@@ -31,16 +39,16 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseCors();
 
 app.UseStaticFiles(new StaticFileOptions
 {
     FileProvider = new PhysicalFileProvider(
         Path.Combine(Directory.GetCurrentDirectory(), "public")),
-    RequestPath = "/switch" 
+    RequestPath = "/switch-dashboard"
 });
 
 app.UseRouting();
-
-app.MapControllers(); 
-
+app.MapHub<SwitchHub>("/switch-hub");
+app.MapControllers();
 app.Run();

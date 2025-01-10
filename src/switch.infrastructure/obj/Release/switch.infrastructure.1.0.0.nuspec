@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>switch.infrastructure</id>
+    <version>1.0.0</version>
+    <authors>switch.infrastructure</authors>
+    <description>Package Description</description>
+    <repository type="git" commit="2a705b9c985bb7fc0e4f072955a94e05f427db2f" />
+    <dependencies>
+      <group targetFramework="net8.0">
+        <dependency id="switch.application" version="1.0.0" exclude="Build,Analyzers" />
+        <dependency id="switch.domain" version="1.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.EntityFrameworkCore" version="9.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.EntityFrameworkCore.SqlServer" version="9.0.0" exclude="Build,Analyzers" />
+        <dependency id="Npgsql.EntityFrameworkCore.PostgreSQL" version="9.0.2" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="/Users/folawewo/Folawewo/Switch/src/switch.infrastructure/bin/Release/net8.0/switch.infrastructure.runtimeconfig.json" target="lib/net8.0/switch.infrastructure.runtimeconfig.json" />
+    <file src="/Users/folawewo/Folawewo/Switch/src/switch.infrastructure/bin/Release/net8.0/switch.infrastructure.dll" target="lib/net8.0/switch.infrastructure.dll" />
+  </files>
+</package>

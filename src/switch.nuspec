@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<package>
+    <metadata>
+        <id>Switch</id>
+        <version>1.0.1</version>
+        <authors>Anthony Famurewa</authors>
+        <owners>Anthony Famurewa</owners>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <licenseUrl>https://github.com/Folawewo/Switch/blob/main/LICENSE</licenseUrl>
+        <projectUrl>https://github.com/Folawewo/Switch</projectUrl>
+        <description>
+            Switch is a powerful feature toggle system for .NET. It includes a built-in web dashboard, SignalR for real-time updates, and SQL database support.
+        </description>
+        <tags>feature-toggle switch .net asp.net-core</tags>
+        <readme>readme.md</readme> 
+        <dependencies>
+            <dependency id="Microsoft.EntityFrameworkCore" version="9.0.0" />
+            <dependency id="Microsoft.EntityFrameworkCore.Design" version="9.0.0" />
+            <dependency id="Microsoft.EntityFrameworkCore.SqlServer" version="9.0.0" />
+            <dependency id="Npgsql.EntityFrameworkCore.PostgreSQL" version="9.0.2" />
+            <dependency id="Microsoft.AspNetCore.SignalR" version="8.0.0" />
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="switch.api/bin/Release/net8.0/*.dll" target="lib/net8.0" />
+        <file src="switch.application/bin/Release/net8.0/*.dll" target="lib/net8.0" />
+        <file src="switch.domain/bin/Release/net8.0/*.dll" target="lib/net8.0" />
+        <file src="switch.infrastructure/bin/Release/net8.0/*.dll" target="lib/net8.0" />
+        <file src="switch.api/public/**" target="contentFiles/any/net8.0/switch-dashboard" />
+        <file src="README.md" target="readme.md" /> 
+        <file src="LICENSE" target="contentFiles/any" />
+    </files>
+</package>

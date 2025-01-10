@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>SwitchManager</id>
+    <version>1.0.1</version>
+    <authors>Anthony Famurewa</authors>
+    <readme>README.md</readme>
+    <description>Package Description</description>
+    <repository type="git" commit="2a705b9c985bb7fc0e4f072955a94e05f427db2f" />
+    <dependencies>
+      <group targetFramework="net8.0">
+        <dependency id="switch.application" version="1.0.0" exclude="Build,Analyzers" />
+        <dependency id="switch.infrastructure" version="1.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.AspNetCore.OpenApi" version="8.0.2" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.AspNetCore.SignalR" version="1.1.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.EntityFrameworkCore" version="9.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.EntityFrameworkCore.SqlServer" version="9.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.DependencyInjection" version="9.0.0" exclude="Build,Analyzers" />
+        <dependency id="Npgsql.EntityFrameworkCore.PostgreSQL" version="9.0.2" exclude="Build,Analyzers" />
+        <dependency id="Swashbuckle.AspNetCore" version="6.4.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <frameworkReferences>
+      <group targetFramework="net8.0">
+        <frameworkReference name="Microsoft.AspNetCore.App" />
+      </group>
+    </frameworkReferences>
+    <contentFiles>
+      <files include="any/net8.0/appsettings.Development.json" buildAction="Content" />
+      <files include="any/net8.0/appsettings.json" buildAction="Content" />
+      <files include="any/net8.0/appsettings.Production.json" buildAction="Content" />
+      <files include="any/net8.0/public/package-lock.json" buildAction="Content" />
+      <files include="any/net8.0/public/package.json" buildAction="Content" />
+    </contentFiles>
+  </metadata>
+  <files>
+    <file src="/Users/folawewo/Folawewo/Switch/src/switch.api/bin/Release/net8.0/switch.api.runtimeconfig.json" target="lib/net8.0/switch.api.runtimeconfig.json" />
+    <file src="/Users/folawewo/Folawewo/Switch/src/switch.api/bin/Release/net8.0/switch.api.dll" target="lib/net8.0/switch.api.dll" />
+    <file src="/Users/folawewo/Folawewo/Switch/src/switch.api/appsettings.Development.json" target="content/appsettings.Development.json" />
+    <file src="/Users/folawewo/Folawewo/Switch/src/switch.api/appsettings.Development.json" target="contentFiles/any/net8.0/appsettings.Development.json" />
+    <file src="/Users/folawewo/Folawewo/Switch/src/switch.api/appsettings.json" target="content/appsettings.json" />
+    <file src="/Users/folawewo/Folawewo/Switch/src/switch.api/appsettings.json" target="contentFiles/any/net8.0/appsettings.json" />
+    <file src="/Users/folawewo/Folawewo/Switch/src/switch.api/appsettings.Production.json" target="content/appsettings.Production.json" />
+    <file src="/Users/folawewo/Folawewo/Switch/src/switch.api/appsettings.Production.json" target="contentFiles/any/net8.0/appsettings.Production.json" />
+    <file src="/Users/folawewo/Folawewo/Switch/src/switch.api/public/package-lock.json" target="content/public/package-lock.json" />
+    <file src="/Users/folawewo/Folawewo/Switch/src/switch.api/public/package-lock.json" target="contentFiles/any/net8.0/public/package-lock.json" />
+    <file src="/Users/folawewo/Folawewo/Switch/src/switch.api/public/package.json" target="content/public/package.json" />
+    <file src="/Users/folawewo/Folawewo/Switch/src/switch.api/public/package.json" target="contentFiles/any/net8.0/public/package.json" />
+    <file src="/Users/folawewo/Folawewo/Switch/src/README.md" target="/README.md" />
+  </files>
+</package>
